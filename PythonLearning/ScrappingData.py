@@ -10,7 +10,7 @@ req = requests.get(url)
 soup = BeautifulSoup(req.content, "html.parser")
 prettify = soup.prettify()
 findLinks = soup.find_all("div", {"id": "brd-crumbs"})
-print(findLinks)
+#print(findLinks)
 
 for hrefLinks in findLinks:
     try:
@@ -24,8 +24,8 @@ for hrefLinks in findLinks:
     except:
         pass
     try:
-        breadCrumb = hrefLinks.contents[1].find_all("li", {"class": "bcrumb-3 last-refinement"})[2]
-        thirdCrumb = breadCrumb.find("li", {"span": "last-refinement-text remove-crumb"})[0]
-        print(thirdCrumb)
+        breadCrumb = hrefLinks.contents[1].find_all("li", {"class": "bcrumb-3 last-refinement"})[0].text
+        #thirdCrumb = breadCrumb.find("li", {"span": "last-refinement-text remove-crumb"})[0]
+        print(breadCrumb)
     except:
         pass
