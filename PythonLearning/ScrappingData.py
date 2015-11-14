@@ -9,7 +9,7 @@ req = requests.get(url)
 
 soup = BeautifulSoup(req.content, "html.parser")
 prettify = soup.prettify()
-findLinks = soup.find_all("div", {"id":"brd-crumbs"})
+findLinks = soup.find_all("div", {"id": "brd-crumbs"})
 print(findLinks)
 
 for hrefLinks in findLinks:
