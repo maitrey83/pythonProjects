@@ -1,5 +1,5 @@
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
 
 # import urllib2
 
@@ -18,7 +18,7 @@ for hrefLinks in findLinks:
     except:
         pass
     try:
-        secondBreadCrumb = hrefLinks.contents[1].find_all("li", {"typeof": "v:Breadcrumb"})[1].text
+        secondBreadCrumb = hrefLinks.contents[1].find_all("li", {"typeof": "v:Breadcrumb"})[1].text.replace()
         print(secondBreadCrumb)
     except:
         pass
