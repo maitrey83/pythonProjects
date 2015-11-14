@@ -25,7 +25,6 @@ for hrefLinks in findLinks:
         pass
     try:
         breadCrumb = hrefLinks.contents[1].find_all("li", {"class": "bcrumb-3 last-refinement"})[0].text
-        #thirdCrumb = breadCrumb.find("li", {"span": "last-refinement-text remove-crumb"})[0]
         print(breadCrumb)
     except:
         pass
