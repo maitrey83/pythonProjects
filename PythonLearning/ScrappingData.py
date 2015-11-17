@@ -18,7 +18,7 @@ for hrefLinks in findLinks:
     except:
         pass
     try:
-        secondBreadCrumb = hrefLinks.contents[1].find_all("li", {"typeof": "v:Breadcrumb"})[1].text.replace()
+        secondBreadCrumb = hrefLinks.contents[1].find_all("li", {"typeof": "v:Breadcrumb"})[1].text
         print(secondBreadCrumb)
     except:
         pass
