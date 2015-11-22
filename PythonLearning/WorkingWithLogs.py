@@ -17,9 +17,7 @@ for hrefLinks in findLinks:
     try:
         firstBreadCrumb = hrefLinks.contents[1].find_all("li", {"typeof": "v:Breadcrumb"})[0].text
         secondBreadCrumb = hrefLinks.contents[1].find_all("li", {"typeof": "v:Breadcrumb"})[1].text
-        print(secondBreadCrumb)
         breadCrumb = hrefLinks.contents[1].find_all("li", {"class": "bcrumb-3 last-refinement"})[0].text
-        print(breadCrumb)
-        logging.info(firstBreadCrumb)
+        logging.info("Breadcrumbs are displaying")
     except:
         pass
