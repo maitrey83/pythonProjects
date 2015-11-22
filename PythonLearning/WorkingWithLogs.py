@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 # import urllib2
 logFormat = "%(asctime)s [%(levelname)s] %(message)s"
-logging.basicConfig(filename='scrapingLogs.log', format=logFormat, level=logging.INFO)
+logging.basicConfig(filename='scrapingLogs.log', format=logFormat, level=20)
 url = "http://www.overstock.com/Home-Garden/Furniture/32/dept.html"
 req = requests.get(url)
 
