@@ -3,12 +3,14 @@ import logging
 import requests
 from bs4 import BeautifulSoup
 
-# import urllib2
+
 logFormat = "%(asctime)s [%(levelname)s] %(message)s"
-logging.basicConfig(filename='scrapingLogs.log', format=logFormat, level=20)
+logPath = '/Users/Maitrey/Documents/pythonProjects/PythonLearning/logs/newPythonTestLogs.log'
+logging.basicConfig(filename=logPath, format=logFormat, level=logging.INFO)
+
+
 url = "http://www.overstock.com/Home-Garden/Furniture/32/dept.html"
 req = requests.get(url)
-
 soup = BeautifulSoup(req.content, "html.parser")
 prettify = soup.prettify()
 findLinks = soup.find_all("div", {"id": "brd-crumbs"})
